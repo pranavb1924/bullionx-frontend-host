@@ -12,7 +12,7 @@ export class MarketService {
 
   getStock(symbol: string): Observable<StockDetails> {
     return this.http.get<StockDetails>(
-      `${environment.apiUrl}api/market/stock`,
+      `${environment.apiUrl}/market/stock`,
       { params: { symbol } }
     );
   }

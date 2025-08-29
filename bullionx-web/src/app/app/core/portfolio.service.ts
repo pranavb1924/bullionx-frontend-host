@@ -16,7 +16,7 @@ export class PortfolioService {
 
   getHoldings(portfolioId: string): Observable<HoldingsResponse> {
     return this.http.get<HoldingsResponse>(
-      `${environment.apiUrl}/api/portfolio/${portfolioId}/holdings`  // Added /api
+      `${environment.apiUrl}portfolio/${portfolioId}/holdings`  // Added /api
     );
   }
 
@@ -26,7 +26,7 @@ export class PortfolioService {
       throw new Error('No user ID available');
     }
     return this.http.get<HoldingsResponse>(
-      `${environment.apiUrl}/api/portfolio/user/${userId}/holdings`  // Added /api
+      `${environment.apiUrl}/portfolio/user/${userId}/holdings`  // Added /api
     );
   }
 }
