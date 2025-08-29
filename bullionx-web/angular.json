@@ -16,6 +16,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/bullionx-web",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -25,7 +26,8 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.css"
@@ -79,11 +81,11 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-  "src/favicon.ico",
-  "src/assets",
-  "src/_redirects"
-]
-            ,
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
             "styles": [
               "src/styles.css"
             ]
