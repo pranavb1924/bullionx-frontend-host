@@ -3,6 +3,10 @@
   command = "npm ci && npm run build"
   publish = "dist/bullionx-web"
 
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA fallback for Angular routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
