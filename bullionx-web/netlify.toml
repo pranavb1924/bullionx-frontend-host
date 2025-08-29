@@ -1,0 +1,9 @@
+[build]
+  base = "bullionx-web"
+  command = "npm ci && npm run build"
+  publish = "dist/bullionx-web"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
